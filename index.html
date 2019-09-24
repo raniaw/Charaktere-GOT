@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JQuery Handlebars</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Jura|Syncopate&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="dep/jquery-3.4.1.min.js"></script>
+    <script src="dep/jquery-ui.min.js"></script>
+    <script src="dep/handlebars.min.js"></script>
+
+</head>
+
+<body class="">
+    <h3 class="text-center text-info">
+        jQuery HandlebarsJs HB-Cards
+    </h3>
+
+    <script id="hb-cards" type="text/x-handlebars-template">
+        <div class="row d-flex">
+            <div class="col">
+                <h3 class="col-12 text-center text-light d-flex justify-content-center align-items-center ">{{title}}</h3>
+
+                <div class="container  rounded shadow-lg col-12 col-sm-10 col-md-8 col-lg-6">
+                    {{#each casting}}
+                    <div class="card text-center bg-transparent m-3 border border-white rounded shadow-lg">
+                        <div class="card-header">
+                            <div class="card card-body rounded d-flex justify-content-center align-items-center ">
+                                <h5 class="card-title text-info">"{{this.actor.cast}}"</h5>
+                                <img src="{{img}}" class="img-thumbnail bg-light shadow-sm rounded ">
+                                <p class="text-muted my-4 card-text">{{this.actor.name}}<br> {{this.age}} Jahre alt
+                                    <br> Haus: "{{this.actor.haus}}" </p>
+                                <br>
+                                <p class="px-lg-4 px-md-2 px-0 px-sm-2 text-muted card-text text-justify">"{{this.actor.zitate}}"</p>
+
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script src="js/script.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
